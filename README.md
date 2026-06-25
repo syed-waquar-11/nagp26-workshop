@@ -7,7 +7,9 @@ This repository contains a Java 21 Spring Boot API tier and a PostgreSQL databas
 - Code repository: `https://github.com/syed-waquar-11/nagp26-workshop`
 - Artifact Registry image: `us-central1-docker.pkg.dev/nagp26-assignment/catalog-api/catalog-api:1.0.0`
 - Service API URL after GKE Ingress provisioning: `http://catalog-api.example.com/api/products`
-- Screen recording: `<PASTE_YOUR_VIDEO_URL_HERE>`
+- Screen recording: 2 Parts because of large size
+- Part 1: https://drive.google.com/file/d/1yTUt1_JdcE2yqZ_QbciKaP8W0b1rtUW_/view?usp=sharing
+- Part 2: https://drive.google.com/file/d/1lJ0mHYUz3wYRJyghWeHdSftV8_9OJCtJ/view?usp=sharing
 
 ## Architecture
 

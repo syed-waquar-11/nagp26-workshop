@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: nagp
+  labels:
+    app.kubernetes.io/part-of: nagp-multi-tier
+---
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: nagp-quota
+  namespace: nagp
+spec:
+  hard:
+    requests.cpu: "2"
+    requests.memory: 3Gi
+    limits.cpu: "4"
+    limits.memory: 6Gi
+    pods: "20"

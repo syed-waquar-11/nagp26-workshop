@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: catalog-api-load
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: catalog-api-load
+  template:
+    metadata:
+      labels:
+        app: catalog-api-load
+    spec:
+      containers:
+        - name: load-test
+          image: busybox
+          command: ["/bin/sh", "-c"]
+          args:
+            - "while true; do wget -q -O- http://catalog-api/api/products > /dev/null 2>&1; done"
+          resources:
+            requests:
+              cpu: 100m
+              memory: 64Mi
+            limits:
+              cpu: 200m
+              memory: 128Mi

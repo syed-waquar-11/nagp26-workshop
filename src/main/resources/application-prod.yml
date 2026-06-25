@@ -1,0 +1,18 @@
+# ──────────────────────────────────────────────
+# PROD environment profile
+# Activated with: spring.profiles.active=prod
+# ──────────────────────────────────────────────
+
+app:
+  environment: ${ENVIRONMENT_NAME:prod}
+
+spring:
+  datasource:
+    hikari:
+      maximum-pool-size: ${DB_POOL_MAX_SIZE:20}
+      minimum-idle: ${DB_POOL_MIN_IDLE:5}
+
+logging:
+  level:
+    root: WARN
+    com.nagp.catalog: INFO
